@@ -1,0 +1,27 @@
+.containerFooter {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+
+    .listFooters {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        margin-top: 2rem;
+
+
+        .itemFooter {
+
+            img {
+                max-width: auto;
+                height: 26rem;
+
+                border-radius: 1rem;
+            }
+
+            a {}
+
+        }
+    }
+}

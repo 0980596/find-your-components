@@ -1,0 +1,27 @@
+.containerCards {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+
+    .listCards {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        margin-top: 2rem;
+
+
+        .itemCards {
+
+            img {
+                max-width: auto;
+                height: 26rem;
+
+                border-radius: 1rem;
+            }
+
+            a {}
+
+        }
+    }
+}

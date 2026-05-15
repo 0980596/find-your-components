@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+:root {}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d8ff34;
+  border-radius: 2px;
+}
+
+/* 
+::selection {
+  color: inherit;
+  background: 0 ;
+} 
+*/
