@@ -14,9 +14,8 @@
         .itemHeader {
 
             img {
-                max-width: auto;
-                height: 26rem;
-
+                width: auto;
+                height: 22rem;
                 border-radius: 1rem;
             }
 

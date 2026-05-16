@@ -1,0 +1,59 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.voltar {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.titulo {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.codeTabs {
+    display: flex;
+    gap: 0;
+    margin-top: 1rem;
+}
+
+.codeTab {
+    padding: 0.5rem 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+
+.codeTabAtiva {
+    font-weight: 600;
+}
+
+.codeBlockRecolhido {
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.codeBlockExpandido {
+    max-height: none;
+    overflow: visible;
+}
+
+.codeBlock pre {
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+.mostrarMais {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+}

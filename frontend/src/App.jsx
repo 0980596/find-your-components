@@ -7,6 +7,7 @@ import Hero from './pages/Hero.jsx'
 import Cards from './pages/Cards.jsx'
 import Contato from './pages/Contato.jsx'
 import Footer from './pages/Footer.jsx'
+import ComponenteDetalhe from './pages/ComponenteDetalhe.jsx'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/cards" element={<Cards />} />
         <Route path="/contato" element={<Contato />} />
         <Route path="/footer" element={<Footer />} />
+        <Route path="/componente/:id" element={<ComponenteDetalhe />} />
       </Routes>
     </BrowserRouter>
   )

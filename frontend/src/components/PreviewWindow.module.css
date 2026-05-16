@@ -1,0 +1,11 @@
+.small .content {
+    transform: scale(0.6);
+    transform-origin: top left;
+    width: 166.66%;
+    height: 166.66%;
+}
+
+.small {
+    max-height: 40rem;
+    overflow: hidden;
+}
