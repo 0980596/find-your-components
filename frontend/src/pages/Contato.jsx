@@ -3,10 +3,17 @@ import { categoria, componentes } from "../data/contato"
 import PreviewWindow from "../components/PreviewWindow"
 import style from "../styles/contato.module.css"
 
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 export default function Contato() {
     return (
         <section className={style.containerContato}>
-            <Link to="/">voltar</Link>
+
+            <div className={style.voltarbtn}>
+                <ChevronLeft />
+                <Link to="/">voltar</Link>
+            </div>
+
             <div className={style.listContatos}>
                 {componentes
                     .filter(c => c.categoria === categoria.id)
@@ -16,10 +23,13 @@ export default function Contato() {
                             <PreviewWindow small>
                                 <item.Component />
                             </PreviewWindow>
-                            <Link to={`/componente/${item.id}`}>ver</Link>
+                            <div className={style.vercomponente}>
+                                <Link to={`/componente/${item.id}`}>Clique aqui para ver o componente</Link>
+                                <ChevronRight />
+                            </div>
+
                         </div>
-                    ))
-                }
+                    ))}
             </div>
         </section>
     )

@@ -6,6 +6,8 @@ import PreviewWindow from "../components/PreviewWindow"
 import { componentes } from "../data"
 import styles from "../styles/componenteDetalhe.module.css"
 
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 export default function ComponenteDetalhe() {
     const { id } = useParams()
     const componente = componentes.find(c => c.id === id)
@@ -14,6 +16,8 @@ export default function ComponenteDetalhe() {
     const [expandido, setExpandido] = useState(false)
     const codeRef = useRef(null)
     const [temMais, setTemMais] = useState(false)
+
+    const [copiado, setCopiado] = useState(false)
 
     const codigoAtual = codigo === "jsx"
         ? componente?.codigos?.jsx || ""
@@ -38,50 +42,68 @@ export default function ComponenteDetalhe() {
         )
     }
 
+    function copiarCodigo() {
+        navigator.clipboard.writeText(codigoAtual)
+        setCopiado(true)
+        setTimeout(() => setCopiado(false), 1500)
+    }
+
     return (
         <section className={styles.container}>
-            <Link to={`/${componente.categoria}`} className={styles.voltar}>voltar</Link>
 
-            <h1 className={styles.titulo}>{componente.nome}</h1>
-
-            <PreviewWindow>
-                <componente.Component />
-            </PreviewWindow>
-
-            <div className={styles.codeTabs}>
-                <button
-                    className={`${styles.codeTab} ${codigo === "jsx" ? styles.codeTabAtiva : ""}`}
-                    onClick={() => setCodigo("jsx")}
-                >
-                    JSX
-                </button>
-                <button
-                    className={`${styles.codeTab} ${codigo === "cssModule" ? styles.codeTabAtiva : ""}`}
-                    onClick={() => setCodigo("cssModule")}
-                >
-                    CSS Module
-                </button>
+            <div className={styles.voltarbtn}>
+                <ChevronLeft />
+                <Link to={`/${componente.categoria}`}>voltar</Link>
             </div>
 
-            <div
-                ref={codeRef}
-                className={`${styles.codeBlock} ${expandido ? styles.codeBlockExpandido : styles.codeBlockRecolhido}`}
-            >
-                <SyntaxHighlighter
-                    language={codigo === "jsx" ? "jsx" : "css"}
-                    style={cleancodeDark}
-                    showLineNumbers
-                    customStyle={{ fontSize: "0.85rem" }}
+            <div className={styles.itemComponente}>
+                <h1 className={styles.titulo}>{componente.nome}</h1>
+
+                <PreviewWindow>
+                    <componente.Component />
+                </PreviewWindow>
+
+                <div className={styles.codeTabs}>
+                    <button
+                        className={`${styles.codeTab} ${codigo === "jsx" ? styles.codeTabAtiva : ""}`}
+                        onClick={() => setCodigo("jsx")}
+                    >
+                        JSX
+                    </button>
+                    <button
+                        className={`${styles.codeTab} ${codigo === "cssModule" ? styles.codeTabAtiva : ""}`}
+                        onClick={() => setCodigo("cssModule")}
+                    >
+                        CSS Module
+                    </button>
+                    <button className={styles.copiarBtn} onClick={copiarCodigo}>
+                        {copiado ? "Copiado!" : "Copiar"}
+                    </button>
+                </div>
+
+                <div
+                    ref={codeRef}
+                    className={`${styles.codeBlock} ${expandido ? styles.codeBlockExpandido : styles.codeBlockRecolhido}`}
                 >
-                    {codigoAtual}
-                </SyntaxHighlighter>
+                    <SyntaxHighlighter
+                        language={codigo === "jsx" ? "jsx" : "css"}
+                        style={cleancodeDark}
+                        showLineNumbers
+                        customStyle={{ fontSize: "0.85rem" }}
+                    >
+                        {codigoAtual}
+                    </SyntaxHighlighter>
+                </div>
+
+                {temMais && (
+                    <button className={styles.mostrarMais} onClick={() => setExpandido(!expandido)}>
+                        {expandido ? "Mostrar menos" : "Mostrar mais"}
+                    </button>
+                )}
+
             </div>
 
-            {temMais && (
-                <button className={styles.mostrarMais} onClick={() => setExpandido(!expandido)}>
-                    {expandido ? "Mostrar menos" : "Mostrar mais"}
-                </button>
-            )}
+
         </section>
     )
 }

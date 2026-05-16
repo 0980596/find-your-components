@@ -1,21 +1,29 @@
 .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 1rem;
-}
+    padding: 2rem 1rem;
 
-.voltar {
-    display: inline-block;
-    margin-bottom: 1rem;
-}
+    .voltarbtn {
+        display: flex;
+        align-items: center;
+        gap: 0.40rem;
 
-.titulo {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+        a {
+            font-size: 1.20rem;
+        }
+
+        svg {}
+    }
+
+    .itemComponente {
+        padding: 2rem 0;
+    }
+
 }
 
 .codeTabs {
     display: flex;
+    align-items: center;
     gap: 0;
     margin-top: 1rem;
 }
@@ -48,12 +56,24 @@
     border-radius: 0 !important;
 }
 
+.codeFooter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .mostrarMais {
-    display: block;
-    width: 100%;
     padding: 0.5rem;
     background: none;
     border: none;
     cursor: pointer;
     font-size: 0.875rem;
+}
+
+.copiarBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 0.5rem 0;
 }
