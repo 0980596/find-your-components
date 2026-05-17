@@ -10,9 +10,10 @@
     .itemComponente {
 
         img {
-            width: auto;
+            width: 100%;
             height: 22rem;
             border-radius: 1rem;
+            object-fit: cover;
         }
 
         a {}

@@ -1,37 +1,36 @@
 import { Link } from "react-router-dom"
+import { categoria, componentes } from "../data/hero"
+import PreviewWindow from "../components/PreviewWindow"
 import style from "../styles/hero.module.css"
+
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Hero() {
     return (
-        <>
-            <section className={style.containerHero}>
+        <section className={style.containerHero}>
 
+            <div className={style.voltarbtn}>
+                <ChevronLeft />
                 <Link to="/">voltar</Link>
+            </div>
 
-                <div className={style.listHeros}>
+            <div className={style.listHeros}>
+                {componentes
+                    .filter(c => c.categoria === categoria.id)
+                    .map(item => (
+                        <div className={style.itemHero} key={item.id}>
+                            <h2>{item.nome}</h2>
+                            <PreviewWindow small>
+                                <item.Component />
+                            </PreviewWindow>
+                            <div className={style.vercomponente}>
+                                <Link to={`/componente/${item.id}`}>Clique aqui para ver o componente</Link>
+                                <ChevronRight />
+                            </div>
 
-                    <div className={style.itemHero}>
-                        <img src="https://xesque.rocketseat.dev/challenges/thumbnails/1758211965188.png" alt="" />
-                        <Link to="/">ver</Link>
-                    </div>
-
-                    <div className={style.itemHero}>
-                        <img src="https://xesque.rocketseat.dev/challenges/thumbnails/1758211965188.png" alt="" />
-                        <Link to="/">ver</Link>
-                    </div>
-
-                    <div className={style.itemHero}>
-                        <img src="https://xesque.rocketseat.dev/challenges/thumbnails/1758211965188.png" alt="" />
-                        <Link to="/">ver</Link>
-                    </div>
-
-                </div>
-
-
-
-            </section>
-
-
-        </>
+                        </div>
+                    ))}
+            </div>
+        </section>
     )
 }

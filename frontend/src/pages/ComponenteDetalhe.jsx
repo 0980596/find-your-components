@@ -6,7 +6,7 @@ import PreviewWindow from "../components/PreviewWindow"
 import { componentes } from "../data"
 import styles from "../styles/componenteDetalhe.module.css"
 
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, Copy, CopyCheck } from 'lucide-react';
 
 export default function ComponenteDetalhe() {
     const { id } = useParams()
@@ -57,6 +57,7 @@ export default function ComponenteDetalhe() {
             </div>
 
             <div className={styles.itemComponente}>
+
                 <h1 className={styles.titulo}>{componente.nome}</h1>
 
                 <PreviewWindow>
@@ -64,46 +65,34 @@ export default function ComponenteDetalhe() {
                 </PreviewWindow>
 
                 <div className={styles.codeTabs}>
-                    <button
-                        className={`${styles.codeTab} ${codigo === "jsx" ? styles.codeTabAtiva : ""}`}
-                        onClick={() => setCodigo("jsx")}
-                    >
-                        JSX
-                    </button>
-                    <button
-                        className={`${styles.codeTab} ${codigo === "cssModule" ? styles.codeTabAtiva : ""}`}
-                        onClick={() => setCodigo("cssModule")}
-                    >
-                        CSS Module
-                    </button>
-                    <button className={styles.copiarBtn} onClick={copiarCodigo}>
-                        {copiado ? "Copiado!" : "Copiar"}
-                    </button>
+
+                    <div className={styles.linguagemBtn}>
+                        <button className={`${styles.codeTab} ${codigo === "jsx" ? styles.codeTabAtiva : ""}`} onClick={() => setCodigo("jsx")}>JSX</button>
+                        <button className={`${styles.codeTab} ${codigo === "cssModule" ? styles.codeTabAtiva : ""}`} onClick={() => setCodigo("cssModule")}>CSS Module</button>
+                    </div>
+
                 </div>
 
-                <div
-                    ref={codeRef}
-                    className={`${styles.codeBlock} ${expandido ? styles.codeBlockExpandido : styles.codeBlockRecolhido}`}
-                >
-                    <SyntaxHighlighter
-                        language={codigo === "jsx" ? "jsx" : "css"}
-                        style={cleancodeDark}
-                        showLineNumbers
-                        customStyle={{ fontSize: "0.85rem" }}
-                    >
-                        {codigoAtual}
-                    </SyntaxHighlighter>
-                </div>
+                <div className={styles.codeWrapper}>
+                    <div ref={codeRef} className={`${styles.codeBlock} ${expandido ? styles.codeBlockExpandido : styles.codeBlockRecolhido}`}>
+                        <SyntaxHighlighter language={codigo === "jsx" ? "jsx" : "css"} style={cleancodeDark} showLineNumbers customStyle={{ fontSize: "0.85rem" }}>
+                            {codigoAtual}
+                        </SyntaxHighlighter>
+                    </div>
 
-                {temMais && (
-                    <button className={styles.mostrarMais} onClick={() => setExpandido(!expandido)}>
-                        {expandido ? "Mostrar menos" : "Mostrar mais"}
-                    </button>
-                )}
+                    <div className={styles.copyBtn}>
+                        <button className={styles.copiarBtn} onClick={copiarCodigo}>{copiado ? <CopyCheck /> : <Copy />}</button>
+                    </div>
+
+                    {temMais && (
+                        <button className={styles.mostrarMais} onClick={() => setExpandido(!expandido)}>
+                            {expandido ? "Mostrar menos" : "Mostrar mais"}
+                        </button>
+                    )}
+                </div>
 
             </div>
 
-
-        </section>
+        </section >
     )
 }
