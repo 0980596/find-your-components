@@ -12,8 +12,7 @@ import Contato02Css from "../components/previews/Contato/contato02.module.css?ra
 // 3. Array de categorias (para a Home)
 export const categoria = {
     id: "contato",
-    nome: "Contato",
-    imagem: "https://xesque.rocketseat.dev/challenges/thumbnails/1758211162577.png"
+    nome: "Contato"
 };
 
 

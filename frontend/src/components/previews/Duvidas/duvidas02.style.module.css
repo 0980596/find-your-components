@@ -1,0 +1,198 @@
+/* ── Layout ─────────────────────────────────────────────────── */
+.faqModernSection {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 10% 0;
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.faqModernHeader {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faqModernSubtitle {
+    color: #4338ca;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.faqModernHeader h2 {
+    color: #0f172a;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 15px;
+    letter-spacing: -0.5px;
+}
+
+.faqModernHeader p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* ── List ───────────────────────────────────────────────────── */
+.faqModernList {
+    display: flex;
+    flex-direction: column;
+}
+
+.faqModernItem {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.faqModernItem:first-child {
+    border-top: 1px solid #e2e8f0;
+}
+
+/* ── Question (button reset) ────────────────────────────────── */
+.faqModernQuestion {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: left;
+    gap: 16px;
+}
+
+.faqModernQuestion h3 {
+    color: #0f172a;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.faqModernQuestion:hover h3 {
+    color: #4338ca;
+}
+
+/* ── Icon — rotates on open ─────────────────────────────────── */
+.faqModernIcon {
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.faqModernQuestion:hover .faqModernIcon {
+    color: #4338ca;
+}
+
+.active .faqModernIcon {
+    transform: rotate(180deg);
+}
+
+/* ── Answer — CSS grid trick ────────────────────────────────── */
+.faqModernAnswer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+}
+
+.faqModernAnswer>div {
+    overflow: hidden;
+}
+
+.faqModernAnswer p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    padding-bottom: 24px;
+    padding-right: 40px;
+}
+
+.active .faqModernAnswer {
+    grid-template-rows: 1fr;
+}
+
+/* ── Responsive: tablets (≤ 768px) ─────────────────────────── */
+@media (max-width: 768px) {
+    .faqModernSection {
+        margin: 80px auto;
+    }
+
+    .faqModernHeader {
+        margin-bottom: 40px;
+    }
+
+    .faqModernHeader h2 {
+        font-size: 1.8rem;
+    }
+
+    .faqModernAnswer p {
+        padding-right: 0;
+    }
+}
+
+/* ── Responsive: large phones (≤ 600px) ────────────────────── */
+@media (max-width: 600px) {
+    .faqModernSection {
+        margin: 60px auto;
+        padding: 0 16px;
+    }
+
+    .faqModernHeader {
+        margin-bottom: 32px;
+    }
+
+    .faqModernHeader h2 {
+        font-size: 1.55rem;
+        letter-spacing: -0.25px;
+    }
+
+    .faqModernHeader p {
+        font-size: 0.9rem;
+    }
+
+    .faqModernQuestion {
+        padding: 20px 0;
+    }
+
+    .faqModernQuestion h3 {
+        font-size: 0.95rem;
+    }
+
+    .faqModernAnswer p {
+        font-size: 0.9rem;
+        padding-bottom: 20px;
+    }
+}
+
+/* ── Responsive: small phones (≤ 420px) ────────────────────── */
+@media (max-width: 420px) {
+    .faqModernSection {
+        margin: 48px auto;
+        padding: 0 12px;
+    }
+
+    .faqModernHeader h2 {
+        font-size: 1.35rem;
+    }
+
+    .faqModernSubtitle {
+        font-size: 0.75rem;
+    }
+
+    .faqModernQuestion {
+        padding: 16px 0;
+        gap: 12px;
+    }
+
+    .faqModernQuestion h3 {
+        font-size: 0.9rem;
+    }
+}

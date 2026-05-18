@@ -1,0 +1,186 @@
+/* ── Layout ─────────────────────────────────────────────────── */
+.faqSection {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10% 0;
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+.faqHeader {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.faqSubtitle {
+    color: #4a7c59;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.faqHeader h2 {
+    color: #123e27;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 15px;
+    letter-spacing: -1px;
+}
+
+/* ── List ───────────────────────────────────────────────────── */
+.faqList {
+    display: flex;
+    flex-direction: column;
+}
+
+.faqItem {
+    border-bottom: 1px solid #e0d5c1;
+}
+
+.faqItem:first-child {
+    border-top: 1px solid #e0d5c1;
+}
+
+/* ── Question (button reset) ────────────────────────────────── */
+.faqQuestion {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: left;
+    gap: 16px;
+}
+
+.faqQuestion h3 {
+    color: #123e27;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.faqQuestion:hover h3 {
+    color: #4a7c59;
+}
+
+/* ── Icon ───────────────────────────────────────────────────── */
+.faqIcon {
+    color: #123e27;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: color 0.3s ease;
+}
+
+.faqQuestion:hover .faqIcon {
+    color: #4a7c59;
+}
+
+/* ── Answer — CSS grid trick for smooth open/close ──────────── */
+.faqAnswer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
+}
+
+.faqAnswer>div {
+    overflow: hidden;
+}
+
+.faqAnswer p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    padding-bottom: 24px;
+    padding-right: 40px;
+}
+
+.active .faqAnswer {
+    grid-template-rows: 1fr;
+}
+
+/* ── Responsive: tablets (≤ 768px) ─────────────────────────── */
+@media (max-width: 768px) {
+    .faqSection {
+        margin: 80px auto;
+    }
+
+    .faqHeader {
+        margin-bottom: 44px;
+    }
+
+    .faqHeader h2 {
+        font-size: 2rem;
+    }
+
+    .faqQuestion h3 {
+        font-size: 1rem;
+    }
+
+    .faqAnswer p {
+        padding-right: 0;
+    }
+}
+
+/* ── Responsive: large phones (≤ 600px) ────────────────────── */
+@media (max-width: 600px) {
+    .faqSection {
+        margin: 60px auto;
+        padding: 0 16px;
+    }
+
+    .faqHeader {
+        margin-bottom: 36px;
+    }
+
+    .faqHeader h2 {
+        font-size: 1.7rem;
+        letter-spacing: -0.5px;
+    }
+
+    .faqSubtitle {
+        font-size: 0.8rem;
+    }
+
+    .faqQuestion {
+        padding: 20px 0;
+    }
+
+    .faqQuestion h3 {
+        font-size: 0.95rem;
+    }
+
+    .faqAnswer p {
+        font-size: 0.9rem;
+        padding-bottom: 20px;
+    }
+}
+
+/* ── Responsive: small phones (≤ 420px) ────────────────────── */
+@media (max-width: 420px) {
+    .faqSection {
+        margin: 48px auto;
+        padding: 0 12px;
+    }
+
+    .faqHeader h2 {
+        font-size: 1.45rem;
+    }
+
+    .faqQuestion h3 {
+        font-size: 0.9rem;
+    }
+
+    .faqQuestion {
+        padding: 16px 0;
+        gap: 12px;
+    }
+}

@@ -1,7 +1,19 @@
 .containerCards {
     max-width: 700px;
     margin: 0 auto;
-    padding: 1rem 1rem;
+    padding: 2rem 1rem;
+
+    .voltarbtn {
+        display: flex;
+        align-items: center;
+        gap: 0.40rem;
+
+        a {
+            font-size: 1.20rem;
+        }
+
+        svg {}
+    }
 
     .listCards {
         display: flex;
@@ -13,13 +25,23 @@
 
         .itemCards {
 
-            img {
-                width: auto;
-                height: 22rem;
-                border-radius: 1rem;
+            h2 {
+                padding: 1rem 0;
             }
 
-            a {}
+            .vercomponente {
+                padding: 1rem 0;
+
+                display: flex;
+                align-items: center;
+                gap: 0.20rem;
+
+                a {
+                    font-size: 1.10rem;
+                    font-weight: 500;
+                }
+
+            }
 
         }
     }

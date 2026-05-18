@@ -1,24 +1,24 @@
 import { Link } from "react-router-dom"
-import { categoria, componentes } from "../data/cards"
+import { categoria, componentes } from "../data/duvidas"
 import PreviewWindow from "../components/PreviewWindow"
-import style from "../styles/cards.module.css"
+import style from "../styles/duvidas.module.css"
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-export default function Cards() {
+export default function Duvidas() {
     return (
-        <section className={style.containerCards}>
+        <section className={style.containerDuvidas}>
 
             <div className={style.voltarbtn}>
                 <ChevronLeft />
                 <Link to="/">voltar</Link>
             </div>
 
-            <div className={style.listCards}>
+            <div className={style.listDuvidas}>
                 {componentes
                     .filter(c => c.categoria === categoria.id)
                     .map(item => (
-                        <div className={style.itemCards} key={item.id}>
+                        <div className={style.itemDuvidas} key={item.id}>
                             <h2>{item.nome}</h2>
                             <PreviewWindow small>
                                 <item.Component />

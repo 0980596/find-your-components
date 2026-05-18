@@ -33,6 +33,13 @@ export default function Home() {
       link: "ver"
     },
     {
+      type: "FAQ",
+      src: "https://s3-alpha.figma.com/hub/file/4934030500/bbb1c340-c027-431a-a0a0-b38ef2a0e96b-cover.png",
+      alt: "tipo componente",
+      linkto: "/duvidas",
+      link: "ver"
+    },
+    {
       type: "Footer",
       src: "https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/9c63663b7fea0e2555e9bb461aa7ff880ac71f89/2ea084161754c66e825a6697db2fc27c736cdfd1",
       alt: "tipo componente",

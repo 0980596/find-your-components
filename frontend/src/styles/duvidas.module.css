@@ -1,4 +1,4 @@
-.containerHeader {
+.containerDuvidas {
     max-width: 700px;
     margin: 0 auto;
     padding: 2rem 1rem;
@@ -15,7 +15,7 @@
         svg {}
     }
 
-    .listHeader {
+    .listDuvidas {
         display: flex;
         flex-direction: column;
         gap: 4rem;
@@ -23,7 +23,7 @@
         margin-top: 2rem;
 
 
-        .itemHeader {
+        .itemDuvidas {
 
             h2 {
                 padding: 1rem 0;

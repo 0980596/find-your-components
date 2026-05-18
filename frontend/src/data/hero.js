@@ -13,8 +13,7 @@ import Hero02Css from "../components/previews/Hero/hero02.module.css?raw"
 // 3. Array de categorias (para a Home)
 export const categoria = {
     id: "hero",
-    nome: "Hero",
-    imagem: "https://designtocodes.com/wp-content/uploads/2024/02/Top-10Hero-Section-Web-UI-Kits-and-Libraries-Collection-2024.jpg"
+    nome: "Hero"
 };
 
 // 4. Array de componentes (sem tailwind)

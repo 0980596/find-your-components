@@ -1,0 +1,293 @@
+/* ── Layout ─────────────────────────────────────────────────── */
+.impactSection {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 10% 0;
+}
+
+.impactHeader {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.impactHeader h2 {
+    color: #123e27;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.impactHeader p {
+    color: #555;
+    font-size: 1rem;
+}
+
+.impactGrid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+/* ── Card Wrapper ───────────────────────────────────────────── */
+.impactCardWrapper {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.impactCardWrapper:hover {
+    transform: translateY(-5px);
+}
+
+.impactCardWrapper::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    bottom: -10px;
+    left: 10px;
+    right: -10px;
+    border-radius: 12px;
+    z-index: -1;
+}
+
+.offsetLightGreen::after {
+    background-color: #8ccba3;
+}
+
+.offsetBrown::after {
+    background-color: #a87b51;
+}
+
+.offsetPeach::after {
+    background-color: #efb08c;
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+.impactCard {
+    border-radius: 12px;
+    padding: 50px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.cardWhite {
+    background-color: #fdfdfd;
+    border: 2px solid #1a4331;
+}
+
+.cardDarkGreen {
+    background-color: #173d27;
+    border: 2px solid #1a4331;
+}
+
+.cardBeige {
+    background-color: #fcf9f5;
+    border: 2px solid #b18563;
+}
+
+/* ── Decorative Circles ─────────────────────────────────────── */
+.circleDecoration {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.topRight {
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+}
+
+.bottomLeft {
+    bottom: -40px;
+    left: -30px;
+    width: 140px;
+    height: 140px;
+}
+
+.middleLeft {
+    top: 50%;
+    transform: translateY(-50%);
+    left: -40px;
+    width: 120px;
+    height: 120px;
+}
+
+.greenCircle {
+    background-color: rgba(140, 203, 163, 0.2);
+}
+
+.darkGreenCircle {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.peachCircle {
+    background-color: rgba(239, 176, 140, 0.2);
+}
+
+/* ── Icons ──────────────────────────────────────────────────── */
+.impactIconBox {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    background: #1a4331;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.impactIconClean {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Numbers & Labels ───────────────────────────────────────── */
+.impactCard h3 {
+    position: relative;
+    z-index: 1;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0 0 5px;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.cardWhite h3 {
+    color: #1a4331;
+}
+
+.cardDarkGreen h3 {
+    color: #fff;
+}
+
+.cardBeige h3 {
+    color: #8e6241;
+}
+
+.impactCard span {
+    position: relative;
+    z-index: 1;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cardWhite span {
+    color: #555;
+}
+
+.cardDarkGreen span {
+    color: #8ccba3;
+}
+
+.cardBeige span {
+    color: #666;
+}
+
+/* ── Responsive: tablets (≤ 900px) ─────────────────────────── */
+@media (max-width: 900px) {
+    .impactSection {
+        margin: 80px auto;
+    }
+
+    .impactHeader {
+        margin-bottom: 48px;
+    }
+
+    .impactHeader h2 {
+        font-size: 2rem;
+    }
+
+    .impactGrid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .impactCard {
+        padding: 40px 24px;
+    }
+
+    /* On column layout the shadow offset looks better on the right */
+    .impactCardWrapper::after {
+        top: 8px;
+        bottom: -8px;
+        left: 8px;
+        right: -8px;
+    }
+}
+
+/* ── Responsive: large phones (≤ 600px) ────────────────────── */
+@media (max-width: 600px) {
+    .impactSection {
+        margin: 60px auto;
+        padding: 0 16px;
+    }
+
+    .impactHeader {
+        margin-bottom: 36px;
+    }
+
+    .impactHeader h2 {
+        font-size: 1.75rem;
+    }
+
+    .impactGrid {
+        gap: 32px;
+    }
+
+    .impactCard {
+        padding: 36px 20px;
+    }
+
+    .impactCard h3 {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+    }
+}
+
+/* ── Responsive: small phones (≤ 420px) ────────────────────── */
+@media (max-width: 420px) {
+    .impactSection {
+        margin: 48px auto;
+        padding: 0 12px;
+    }
+
+    .impactHeader h2 {
+        font-size: 1.5rem;
+    }
+
+    .impactGrid {
+        gap: 28px;
+    }
+
+    .impactCard {
+        padding: 28px 16px;
+    }
+
+    .impactCard h3 {
+        font-size: 2.4rem;
+    }
+
+    .impactCard span {
+        font-size: 0.7rem;
+    }
+}
