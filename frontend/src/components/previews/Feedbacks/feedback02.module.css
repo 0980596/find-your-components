@@ -1,0 +1,216 @@
+/* =====================
+   SECTION
+===================== */
+.section {
+    padding: 60px 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+    text-align: center;
+    max-width: 650px;
+    margin-bottom: 40px;
+    animation: fadeUp 0.8s ease-out;
+}
+
+.badge {
+    display: inline-block;
+    color: #64748b;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 12px;
+    letter-spacing: 0.05em;
+}
+
+.title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 12px;
+    letter-spacing: -0.03em;
+}
+
+.subtitle {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* =====================
+   GRID
+===================== */
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 620px;
+    width: 100%;
+    max-width: 1050px;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+}
+
+.marqueeCol {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    height: max-content;
+}
+
+.marqueeTrack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.colDown {
+    animation: scrollDown 18s linear infinite;
+}
+
+.colUp {
+    animation: scrollUp 18s linear infinite;
+}
+
+.grid:hover .colDown,
+.grid:hover .colUp {
+    animation-play-state: paused;
+}
+
+/* =====================
+   CARD
+===================== */
+.card {
+    background-color: #fff;
+    border: 1px solid #f1f5f9;
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.cardText {
+    font-size: 0.98rem;
+    color: #334155;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =====================
+   AUTHOR
+===================== */
+.author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #f1f5f9;
+    flex-shrink: 0;
+}
+
+.info h4 {
+    font-size: 1rem;
+    color: #0f172a;
+    margin: 0 0 4px;
+    font-weight: 700;
+}
+
+.info p {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+@keyframes scrollDown {
+    0% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 1024px) {
+    .marqueeCol:nth-child(3) {
+        display: none;
+    }
+
+    .grid {
+        max-width: 680px;
+    }
+}
+
+@media (max-width: 768px) {
+    .marqueeCol:nth-child(2) {
+        display: none;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .grid {
+        height: 500px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 310px;
+        margin: 0 auto;
+    }
+
+    .marqueeCol {
+        width: 100%;
+    }
+}

@@ -33,6 +33,13 @@ export default function Home() {
       link: "ver"
     },
     {
+      type: "Feedback",
+      src: " https://cdn.dribbble.com/userupload/42791513/file/original-5b5da76b0b82c5d24ded9c30b9979fc1.png?resize=1024x768&vertical=center",
+      alt: "tipo componente",
+      linkto: "/feedback",
+      link: "ver"
+    },
+    {
       type: "FAQ",
       src: "https://s3-alpha.figma.com/hub/file/4934030500/bbb1c340-c027-431a-a0a0-b38ef2a0e96b-cover.png",
       alt: "tipo componente",
@@ -46,6 +53,7 @@ export default function Home() {
       linkto: "/footer",
       link: "ver"
     }
+   
   ]
 
   return (

@@ -1,0 +1,245 @@
+.section {
+    padding: 100px 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+    text-align: center;
+    max-width: 650px;
+    margin-bottom: 60px;
+    padding: 0 20px;
+    animation: fadeUp 0.8s ease-out;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    color: #444;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 16px;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: #666666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =====================
+   CAROUSEL
+===================== */
+.carousel {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    padding: 10px 0;
+}
+
+.marqueeWrapper {
+    display: flex;
+    width: max-content;
+}
+
+.marqueeTrack {
+    display: flex;
+    gap: 24px;
+    padding-right: 24px;
+}
+
+.marqueeRight {
+    animation: scrollRight 45s linear infinite;
+}
+
+.marqueeLeft {
+    animation: scrollLeft 45s linear infinite;
+}
+
+.marqueeWrapper:hover {
+    animation-play-state: paused;
+}
+
+/* =====================
+   CARD
+===================== */
+.card {
+    width: 350px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.cardText {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1.6;
+    margin: 0 0 32px;
+}
+
+/* =====================
+   AUTHOR
+===================== */
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.authorInfo h4 {
+    font-size: 1rem;
+    color: #111111;
+    margin: 0 0 4px;
+    font-weight: 600;
+}
+
+.authorInfo p {
+    font-size: 0.85rem;
+    color: #888;
+    margin: 0;
+}
+
+.authorImage {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #f0f0f0;
+}
+
+.companyBadge {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bgGoogle      { background-color: #4285F4; }
+.bgAdobe       { background-color: #FF0000; }
+.bgMailchimp   { background-color: #FFE01B; color: #000; }
+.bgNotion      { background-color: #000000; }
+.bgSlack       { background-color: #4A154B; }
+.bgSquarespace { background-color: #111111; }
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+    margin-top: 50px;
+    animation: fadeUp 0.8s ease-out 0.2s backwards;
+}
+
+.btnOutline {
+    background-color: #fff;
+    color: #111111;
+    border: 1px solid #dcdcdc;
+    padding: 14px 32px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btnOutline:hover {
+    border-color: #bbb;
+    background-color: #fafafa;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* =====================
+   ANIMATIONS
+===================== */
+@keyframes scrollRight {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes scrollLeft {
+    0%   { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+    .title    { font-size: 2.5rem; }
+    .subtitle { font-size: 1.05rem; }
+
+    .card {
+        width: 300px;
+        padding: 24px;
+    }
+
+    .marqueeTrack {
+        gap: 16px;
+        padding-right: 16px;
+    }
+
+    .carousel { gap: 16px; }
+}

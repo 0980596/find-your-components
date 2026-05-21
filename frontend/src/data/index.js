@@ -4,6 +4,7 @@ import { categoria as catCards, componentes as compsCards } from "./cards"
 import { categoria as catDuvidas, componentes as compsDuvidas } from "./duvidas"
 import { categoria as catHeader, componentes as compsHeader } from "./header"
 import { categoria as catFooter, componentes as compsFooter } from "./footer"
+import { categoria as catFeedback, componentes as compsFeedback } from "./feedback"
 
-export const categorias = [catContato, catHero, catCards, catDuvidas, catHeader, catFooter]
-export const componentes = [...compsContato, ...compsHero, ...compsCards, ...compsDuvidas, ...compsHeader, ...compsFooter]
+export const categorias = [catContato, catHero, catCards, catDuvidas, catHeader, catFooter, catFeedback]
+export const componentes = [...compsContato, ...compsHero, ...compsCards, ...compsDuvidas, ...compsHeader, ...compsFooter, ...compsFeedback]
