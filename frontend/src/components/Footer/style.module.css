@@ -1,0 +1,21 @@
+footer {
+    margin-top: 3rem;
+    padding: 2rem 0;
+
+    .footer {
+        max-width: 68.75rem;
+        padding: 0 2rem;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        display: flex;
+
+        p {
+            color: #0f172a;
+            font-weight: 500;
+            font-size: 0.85rem;
+        }
+
+    }
+
+}

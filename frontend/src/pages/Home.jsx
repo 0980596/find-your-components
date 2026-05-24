@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom"
 import style from "../styles/home.module.css"
 
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+
 export default function Home() {
 
   const itensCpmponente = [
@@ -53,11 +56,13 @@ export default function Home() {
       linkto: "/footer",
       link: "ver"
     }
-   
+
   ]
 
   return (
     <>
+      <Header />
+      
       <main className={style.listaFiltroComponentes}>
 
         {itensCpmponente.map((itens, index) => (
@@ -69,6 +74,8 @@ export default function Home() {
         ))}
 
       </main>
+
+      <Footer />
     </>
   )
 }
