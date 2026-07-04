@@ -12,11 +12,6 @@ export default function Hero() {
             <MainHeader />
             <section className={style.containerHero}>
 
-                <div className={style.voltarbtn}>
-                    <ChevronLeft />
-                    <Link to="/">voltar</Link>
-                </div>
-
                 <div className={style.listHeros}>
                     {componentes
                         .filter(c => c.categoria === categoria.id)

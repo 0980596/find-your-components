@@ -12,11 +12,6 @@ export default function Cards() {
             <MainHeader />
             <section className={style.containerCards}>
 
-                <div className={style.voltarbtn}>
-                    <ChevronLeft />
-                    <Link to="/">voltar</Link>
-                </div>
-
                 <div className={style.listCards}>
                     {componentes
                         .filter(c => c.categoria === categoria.id)

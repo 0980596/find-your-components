@@ -12,11 +12,6 @@ export default function Contato() {
             <MainHeader />
             <section className={style.containerContato}>
 
-                <div className={style.voltarbtn}>
-                    <ChevronLeft />
-                    <Link to="/">voltar</Link>
-                </div>
-
                 <div className={style.listContatos}>
                     {componentes
                         .filter(c => c.categoria === categoria.id)

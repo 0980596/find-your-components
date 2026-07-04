@@ -44,11 +44,6 @@ export default function ComponenteDetalhe() {
             <MainHeader />
             <section className={styles.container}>
 
-                <div className={styles.voltarbtn}>
-                    <ChevronLeft />
-                    <Link to={`/${componente.categoria}`}>voltar</Link>
-                </div>
-
                 <div className={styles.itemComponente}>
 
                     <h1 className={styles.titulo}>{componente.nome}</h1>

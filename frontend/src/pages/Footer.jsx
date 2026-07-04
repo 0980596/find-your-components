@@ -12,11 +12,6 @@ export default function Footer() {
             <MainHeader />
             <section className={style.containerFooter}>
 
-                <div className={style.voltarbtn}>
-                    <ChevronLeft />
-                    <Link to="/">voltar</Link>
-                </div>
-
                 <div className={style.listFooters}>
                     {componentes
                         .filter(c => c.categoria === categoria.id)

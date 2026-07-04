@@ -12,11 +12,6 @@ export default function Feedback() {
             <MainHeader />
             <section className={style.containerFeedback}>
 
-                <div className={style.voltarbtn}>
-                    <ChevronLeft />
-                    <Link to="/">voltar</Link>
-                </div>
-
                 <div className={style.listFeedback}>
                     {componentes
                         .filter(c => c.categoria === categoria.id)

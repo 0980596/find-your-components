@@ -12,11 +12,6 @@ export default function Header() {
             <MainHeader />
             <section className={style.containerHeader}>
 
-                <div className={style.voltarbtn}>
-                    <ChevronLeft />
-                    <Link to="/">voltar</Link>
-                </div>
-
                 <div className={style.listHeader}>
                     {componentes
                         .filter(c => c.categoria === categoria.id)

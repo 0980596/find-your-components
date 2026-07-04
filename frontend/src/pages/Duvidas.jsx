@@ -12,11 +12,6 @@ export default function Duvidas() {
             <MainHeader />
             <section className={style.containerDuvidas}>
 
-                <div className={style.voltarbtn}>
-                    <ChevronLeft />
-                    <Link to="/">voltar</Link>
-                </div>
-
                 <div className={style.listDuvidas}>
                     {componentes
                         .filter(c => c.categoria === categoria.id)
