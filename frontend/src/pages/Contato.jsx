@@ -1,21 +1,18 @@
 import { Link } from "react-router-dom"
 import { categoria, componentes } from "../data/contato"
 import PreviewWindow from "../components/PreviewWindow"
-import MainHeader from "../components/Header"
+import Menu from "../components/Menu"
 import style from "../styles/contato.module.css"
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Header from "../components/Header"
 
 export default function Contato() {
     return (
         <>
-            <MainHeader />
+            <Header  />
+            <Menu />
             <section className={style.containerContato}>
-
-                <div className={style.voltarbtn}>
-                    <ChevronLeft />
-                    <Link to="/">voltar</Link>
-                </div>
 
                 <div className={style.listContatos}>
                     {componentes

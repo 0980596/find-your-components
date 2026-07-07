@@ -1,79 +1,51 @@
 import { Link } from "react-router-dom"
-import style from "../styles/home.module.css"
-
-import Header from "../components/Header"
+import { MousePointerClick, Eye, Code, Sparkles } from "lucide-react"
 import Footer from "../components/Footer"
+import style from "../styles/home.module.css"
+import Header from "../components/Header"
 
 export default function Home() {
-
-  const itensCpmponente = [
-    {
-      type: "Header",
-      src: "https://xesque.rocketseat.dev/challenges/thumbnails/1759338602096.png",
-      alt: "tipo componente",
-      linkto: "/header",
-      link: "ver"
-    },
-    {
-      type: "Hero",
-      src: "https://designtocodes.com/wp-content/uploads/2024/02/Top-10Hero-Section-Web-UI-Kits-and-Libraries-Collection-2024.jpg",
-      alt: "tipo componente",
-      linkto: "/hero",
-      link: "ver"
-    },
-    {
-      type: "Cards",
-      src: "https://s3-alpha.figma.com/hub/file/3717074969/8f8c4a6d-c474-476d-8e5f-f0c1292715e9-cover.png",
-      alt: "tipo componente",
-      linkto: "/cards",
-      link: "ver"
-    },
-    {
-      type: "Contato",
-      src: "https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/67040f6fbefa003eaf51aa74ddf3e66e44979607",
-      alt: "tipo componente",
-      linkto: "/contato",
-      link: "ver"
-    },
-    {
-      type: "Feedback",
-      src: " https://cdn.dribbble.com/userupload/42791513/file/original-5b5da76b0b82c5d24ded9c30b9979fc1.png?resize=1024x768&vertical=center",
-      alt: "tipo componente",
-      linkto: "/feedback",
-      link: "ver"
-    },
-    {
-      type: "FAQ",
-      src: "https://s3-alpha.figma.com/hub/file/4934030500/bbb1c340-c027-431a-a0a0-b38ef2a0e96b-cover.png",
-      alt: "tipo componente",
-      linkto: "/duvidas",
-      link: "ver"
-    },
-    {
-      type: "Footer",
-      src: "https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/9c63663b7fea0e2555e9bb461aa7ff880ac71f89/2ea084161754c66e825a6697db2fc27c736cdfd1",
-      alt: "tipo componente",
-      linkto: "/footer",
-      link: "ver"
-    }
-
-  ]
-
   return (
     <>
+
       <Header />
-      
-      <main className={style.listaFiltroComponentes}>
 
-        {itensCpmponente.map((itens, index) => (
-          <div className={style.itemComponente} key={index}>
-            <h1>{itens.type}</h1>
-            <img src={itens.src} alt={itens.alt} />
-            <Link to={itens.linkto}>{itens.link}</Link>
+      <section id="home" className={style.hero}>
+        <h1 className={style.heroTitle}>Find yours componentes</h1>
+        <p className={style.heroSubtitle}>
+          Componentes React prontos para copiar e usar no seu projeto.
+          Escolha, visualize e copie o código em segundos.
+        </p>
+        <Link to={`/header`} className={style.ctaButton}>
+          Explorar componentes
+        </Link>
+      </section>
+
+      <section className={style.comoFunciona}>
+        <h2 className={style.comoFuncionaTitle}>Como funciona</h2>
+        <div className={style.passosContainer}>
+          <div className={style.passo}>
+            <div className={style.passoIcon}><MousePointerClick size={24} /></div>
+            <h3 className={style.passoNome}>Escolha</h3>
+            <p className={style.passoDesc}>Navegue pelas categorias e encontre o componente</p>
           </div>
-        ))}
-
-      </main>
+          <div className={style.passo}>
+            <div className={style.passoIcon}><Eye size={24} /></div>
+            <h3 className={style.passoNome}>Visualize</h3>
+            <p className={style.passoDesc}>Veja o componente em ação com preview ao vivo</p>
+          </div>
+          <div className={style.passo}>
+            <div className={style.passoIcon}><Code size={24} /></div>
+            <h3 className={style.passoNome}>Copie</h3>
+            <p className={style.passoDesc}>Copie o código JSX e CSS e use no seu projeto</p>
+          </div>
+          <div className={style.passo}>
+            <div className={style.passoIcon}><Sparkles size={24} /></div>
+            <h3 className={style.passoNome}>Adapte</h3>
+            <p className={style.passoDesc}>Converta para qualquer framework com prompts</p>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </>
