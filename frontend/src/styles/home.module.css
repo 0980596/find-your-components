@@ -1,22 +1,168 @@
-.listaFiltroComponentes {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 1rem 1rem;
-
+.hero {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 4rem 1.5rem;
+    gap: 1.5rem;
+}
 
-    .itemComponente {
+.heroTitle {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+}
 
-        img {
-            width: 100%;
-            height: 22rem;
-            border-radius: 1rem;
-            object-fit: cover;
-        }
+.heroSubtitle {
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    color: #555;
+    text-align: center;
+    max-width: 500px;
+    line-height: 1.6;
+}
 
-        a {}
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.85rem 2rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0.54rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: opacity 0.2s;
 
+    &:hover {
+        opacity: 0.8;
     }
+}
+
+.ctaIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #fff;
+    border-radius: 0.25rem;
+    color: #000;
+}
+
+.comoFunciona {
+    padding: 4rem 1rem;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+.comoFuncionaTitle {
+    font-size: 2rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.passosContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.passo {
+    flex: 1;
+    text-align: center;
+    max-width: 200px;
+}
+
+.passoIcon {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 0.54rem;
+    color: #000;
+}
+
+.passoNome {
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.passoDesc {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.categoriasSection {
+    padding: 4rem 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.categoriasTitle {
+    font-size: 2rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.categoriasGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem;
+}
+
+.categoriaCard {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 0.75rem;
+    transition: border-color 0.2s;
+
+    &:hover {
+        border-color: #000;
+    }
+}
+
+.categoriaIcon {
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.categoriaNome {
+    font-size: 1.15rem;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.categoriaQtd {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.categoriaLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-top: auto;
 }

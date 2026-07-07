@@ -1,32 +1,51 @@
 import { useState } from "react"
 import styles from "./styles.module.css"
 import { NavLink } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 
 export default function Header() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+    function toggleMenu() {
+        setIsMenuOpen(prev => !prev)
+    }
 
+    function closeMenu() {
+        setIsMenuOpen(false)
+    }
 
     return (
         <>
-
             <header className={styles.header}>
+                <button
+                    type="button"
+                    className={styles.menuButton}
+                    onClick={toggleMenu}
+                    aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
+                    aria-expanded={isMenuOpen}
+                >
+                    {isMenuOpen ? <X /> : <Menu />}
+                </button>
 
-                <nav className={styles.nav}>
+                <div
+                    className={`${styles.overlay} ${isMenuOpen ? styles.overlayOpen : ""}`}
+                    onClick={closeMenu}
+                />
 
+                <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ""}`}>
 
                     <div className={styles.section}>
                         <h2 className={styles.sectionTitle}>Sessões</h2>
                         <div className={styles.linksContainer}>
-                            <NavLink to="/header" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Headers</NavLink>
-                            <NavLink to="/hero" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Hero</NavLink>
-                            <NavLink to="/cards" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Cards</NavLink>
-                            <NavLink to="/" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Carrossel</NavLink>
-                            <NavLink to="/feedback" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Feedbacks</NavLink>
-                            <NavLink to="/duvidas" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Duvidas</NavLink>
-                            <NavLink to="/contato" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Contato</NavLink>
-                            <NavLink to="/footer" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Footer</NavLink>
+                            <NavLink onClick={closeMenu} to="/header" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Headers</NavLink>
+                            <NavLink onClick={closeMenu} to="/hero" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Hero</NavLink>
+                            <NavLink onClick={closeMenu} to="/cards" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Cards</NavLink>
+                            <NavLink onClick={closeMenu} to="/" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Carrossel</NavLink>
+                            <NavLink onClick={closeMenu} to="/feedback" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Feedbacks</NavLink>
+                            <NavLink onClick={closeMenu} to="/duvidas" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Duvidas</NavLink>
+                            <NavLink onClick={closeMenu} to="/contato" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Contato</NavLink>
+                            <NavLink onClick={closeMenu} to="/footer" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Footer</NavLink>
                         </div>
                     </div>
 
@@ -34,17 +53,13 @@ export default function Header() {
                     <div className={styles.section}>
                         <h2 className={styles.sectionTitle}>Componentes</h2>
                         <div className={styles.linksContainer}>
-                            <NavLink to="/" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Buttons</NavLink>
-                            <NavLink to="/" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Input</NavLink>
-                            <NavLink to="/" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Textarea</NavLink>
+                            <NavLink onClick={closeMenu} to="/" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Buttons</NavLink>
+                            <NavLink onClick={closeMenu} to="/" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Input</NavLink>
+                            <NavLink onClick={closeMenu} to="/" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Textarea</NavLink>
                         </div>
                     </div>
-
-
                 </nav>
-
             </header>
-
         </>
     )
 }
