@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom"
 import { categoria, componentes } from "../data/footer"
 import PreviewWindow from "../components/PreviewWindow"
-import MainHeader from "../components/Header"
+import Menu from "../components/Menu"
 import style from "../styles/footer.module.css"
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Header from "../components/Header"
 
 export default function Footer() {
     return (
         <>
-            <MainHeader />
+            <Header />
+            <Menu />
             <section className={style.containerFooter}>
 
                 <div className={style.listFooters}>

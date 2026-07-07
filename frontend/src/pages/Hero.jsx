@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom"
 import { categoria, componentes } from "../data/hero"
 import PreviewWindow from "../components/PreviewWindow"
-import MainHeader from "../components/Header"
+import Menu from "../components/Menu"
 import style from "../styles/hero.module.css"
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Header from "../components/Header"
 
 export default function Hero() {
     return (
         <>
-            <MainHeader />
+            <Header />
+            <Menu />
             <section className={style.containerHero}>
 
                 <div className={style.listHeros}>

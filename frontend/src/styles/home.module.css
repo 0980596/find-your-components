@@ -57,7 +57,7 @@
 
 .comoFunciona {
     padding: 4rem 1rem;
-    max-width: 50rem;
+    max-width: 56rem;
     margin: 0 auto;
 }
 
@@ -71,7 +71,8 @@
 .passosContainer {
     display: flex;
     justify-content: space-between;
-    margin-top: 4rem;
+    gap: 2rem;
+    padding: 4rem 0;
 }
 
 .passo {

@@ -3,11 +3,12 @@ import { useParams, Link } from "react-router-dom"
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
 import cleancodeDark from "../data/cleancodeDark"
 import PreviewWindow from "../components/PreviewWindow"
-import MainHeader from "../components/Header"
+import Menu from "../components/Menu"
 import { componentes } from "../data"
 import styles from "../styles/componenteDetalhe.module.css"
 
 import { ChevronLeft, Copy, CopyCheck } from 'lucide-react';
+import Header from "../components/Header"
 
 export default function ComponenteDetalhe() {
     const { id } = useParams()
@@ -24,7 +25,7 @@ export default function ComponenteDetalhe() {
     if (!componente) {
         return (
             <>
-                <MainHeader />
+                <Menu />
                 <section className={styles.container}>
                     <Link to="/" className={styles.voltar}>voltar</Link>
                     <h1>Componente não encontrado</h1>
@@ -41,7 +42,8 @@ export default function ComponenteDetalhe() {
 
     return (
         <>
-            <MainHeader />
+            <Header />
+            <Menu />
             <section className={styles.container}>
 
                 <div className={styles.itemComponente}>

@@ -1,15 +1,18 @@
 import { Link } from "react-router-dom"
 import { categoria, componentes } from "../data/header"
 import PreviewWindow from "../components/PreviewWindow"
-import MainHeader from "../components/Header"
+import Menu from "../components/Menu"
 import style from "../styles/header.module.css"
+
+import HeaderContent from "../components/Header"
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Header() {
     return (
         <>
-            <MainHeader />
+            <HeaderContent />
+            <Menu />
             <section className={style.containerHeader}>
 
                 <div className={style.listHeader}>

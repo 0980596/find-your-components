@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom"
 import { categoria, componentes } from "../data/cards"
 import PreviewWindow from "../components/PreviewWindow"
-import MainHeader from "../components/Header"
+import Menu from "../components/Menu"
 import style from "../styles/cards.module.css"
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Header from "../components/Header"
 
 export default function Cards() {
     return (
         <>
-            <MainHeader />
+            <Header />
+            <Menu />
             <section className={style.containerCards}>
 
                 <div className={style.listCards}>
