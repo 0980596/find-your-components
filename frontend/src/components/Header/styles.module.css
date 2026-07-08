@@ -5,6 +5,8 @@
     padding: 0.85rem 2rem;
     max-width: 81%;
     margin: 0 auto;
+    position: relative;
+    z-index: 1001;
 }
 
 .left {
