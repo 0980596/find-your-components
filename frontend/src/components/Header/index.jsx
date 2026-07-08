@@ -11,13 +11,13 @@ export default function Header() {
             </div>
 
             <nav className={styles.center}>
-                <NavLink to="/guia" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Docs</NavLink>
+                <NavLink to="/docs" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Docs</NavLink>
                 <NavLink to="/header" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Componentes</NavLink>
                 <button className={styles.badge}>In beta</button>
             </nav>
 
             <div className={styles.right}>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
+                <a href="https://github.com/0980596/find-your-components" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
                     <FaGithub size={18} />
                 </a>
                 <span className={styles.separator}></span>

@@ -1,24 +1,24 @@
 import { Link } from "react-router-dom"
-import { categoria, componentes } from "../data/duvidas"
-import PreviewWindow from "../components/PreviewWindow"
-import Menu from "../components/Menu"
-import style from "../styles/duvidas.module.css"
+import { categoria, componentes } from "../../data/contato"
+import PreviewWindow from "../../components/PreviewWindow"
+import Menu from "../../components/Menu"
+import style from "../../styles/categoria.module.css"
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Header from "../components/Header"
+import Header from "../../components/Header"
 
-export default function Duvidas() {
+export default function Contato() {
     return (
         <>
-            <Header />
+            <Header  />
             <Menu />
-            <section className={style.containerDuvidas}>
+            <section className={style.container}>
 
-                <div className={style.listDuvidas}>
+                <div className={style.list}>
                     {componentes
                         .filter(c => c.categoria === categoria.id)
                         .map(item => (
-                            <div className={style.itemDuvidas} key={item.id}>
+                            <div className={style.item} key={item.id}>
                                 <h2>{item.nome}</h2>
                                 <PreviewWindow small>
                                     <item.Component />

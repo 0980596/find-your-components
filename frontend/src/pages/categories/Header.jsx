@@ -1,26 +1,27 @@
 import { Link } from "react-router-dom"
-import { categoria, componentes } from "../data/contato"
-import PreviewWindow from "../components/PreviewWindow"
-import Menu from "../components/Menu"
-import style from "../styles/contato.module.css"
+import { categoria, componentes } from "../../data/header"
+import PreviewWindow from "../../components/PreviewWindow"
+import Menu from "../../components/Menu"
+import style from "../../styles/categoria.module.css"
+
+import HeaderContent from "../../components/Header"
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Header from "../components/Header"
 
-export default function Contato() {
+export default function Header() {
     return (
         <>
-            <Header  />
+            <HeaderContent />
             <Menu />
-            <section className={style.containerContato}>
+            <section className={style.container}>
 
-                <div className={style.listContatos}>
+                <div className={style.list}>
                     {componentes
                         .filter(c => c.categoria === categoria.id)
                         .map(item => (
-                            <div className={style.itemContato} key={item.id}>
+                            <div className={style.item} key={item.id}>
                                 <h2>{item.nome}</h2>
-                                <PreviewWindow small>
+                                <PreviewWindow small={item.id === "header-02"}>
                                     <item.Component />
                                 </PreviewWindow>
                                 <div className={style.vercomponente}>

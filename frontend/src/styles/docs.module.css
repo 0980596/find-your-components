@@ -1,0 +1,162 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.title {
+    font-size: 2rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section {
+    margin-bottom: 2.5rem;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.list {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    padding-left: 1.5rem;
+}
+
+.list li {
+    margin-bottom: 0.25rem;
+}
+
+.comoUsar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.comoUsarItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.comoUsarNum {
+    width: 2rem;
+    height: 2rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.comoUsarTitulo {
+    font-size: 1rem;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.comoUsarDesc {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 150px);
+    gap: 1rem;
+    justify-content: start;
+    margin-top: 1rem;
+}
+
+.gridItem {
+    padding: 1rem 0;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+}
+
+.cta {
+    text-align: center;
+    padding: 3rem 1rem;
+    border: 1px dashed #ddd;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+}
+
+.ctaIcon {
+    display: block;
+    margin: 0 auto 1rem;
+    color: #000;
+}
+
+.ctaTitle {
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 0.75rem;
+}
+
+.ctaText {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.ctaButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.ctaBtn {
+    padding: 0.75rem 1.5rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.ctaBtn:hover {
+    opacity: 0.8;
+}
+
+.ctaBtnOutline {
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: #000;
+    border: 1px solid #888;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.ctaBtnOutline:hover {
+    opacity: 0.7;
+}
+
+

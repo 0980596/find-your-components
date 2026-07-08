@@ -1,24 +1,24 @@
 import { Link } from "react-router-dom"
-import { categoria, componentes } from "../data/footer"
-import PreviewWindow from "../components/PreviewWindow"
-import Menu from "../components/Menu"
-import style from "../styles/footer.module.css"
+import { categoria, componentes } from "../../data/cards"
+import PreviewWindow from "../../components/PreviewWindow"
+import Menu from "../../components/Menu"
+import style from "../../styles/categoria.module.css"
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Header from "../components/Header"
+import Header from "../../components/Header"
 
-export default function Footer() {
+export default function Cards() {
     return (
         <>
             <Header />
             <Menu />
-            <section className={style.containerFooter}>
+            <section className={style.container}>
 
-                <div className={style.listFooters}>
+                <div className={style.list}>
                     {componentes
                         .filter(c => c.categoria === categoria.id)
                         .map(item => (
-                            <div className={style.itemFooter} key={item.id}>
+                            <div className={style.item} key={item.id}>
                                 <h2>{item.nome}</h2>
                                 <PreviewWindow small>
                                     <item.Component />

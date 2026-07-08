@@ -23,19 +23,6 @@
     position: relative;
 }
 
-/* Vertical line running behind everything - starts at Home and ends at the last link */
-.nav::before {
-    content: "";
-    position: absolute;
-    left: 8px;
-    top: 8px;
-    bottom: 8px;
-    width: 2px;
-    background-color: #000000;
-    opacity: 0.1;
-    z-index: 0;
-}
-
 .homeLink {
     font-weight: 700;
     font-size: 1.3rem;
