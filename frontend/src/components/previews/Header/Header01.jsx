@@ -9,7 +9,7 @@ import {
     Newspaper,
     LayoutDashboard,
 } from 'lucide-react';
-import styles from './header01.module.css';
+import styles from './Header01.module.css';
 
 export default function Header01() {
     const [menuOpen, setMenuOpen] = useState(false);

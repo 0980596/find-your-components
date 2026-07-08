@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
-import styles from './header02.module.css';
+import styles from './Header02.module.css';
 
 export default function Header02() {
 
