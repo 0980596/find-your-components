@@ -11,7 +11,7 @@ export default function Header() {
             </div>
 
             <nav className={styles.center}>
-                <NavLink to="/guia" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Docs</NavLink>
+                <NavLink to="/docs" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Docs</NavLink>
                 <NavLink to="/header" className={({ isActive }) => `${styles.link} ${isActive ? styles.activeLink : ""}`}>Componentes</NavLink>
                 <button className={styles.badge}>In beta</button>
             </nav>

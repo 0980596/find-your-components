@@ -10,6 +10,7 @@ import Footer from './pages/Footer.jsx'
 import Duvidas from './pages/Duvidas.jsx'
 import Feedback from './pages/Feedback.jsx'
 import ComponenteDetalhe from './pages/ComponenteDetalhe.jsx'
+import Docs from './pages/Docs.jsx'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -34,6 +35,8 @@ export default function App() {
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/duvidas" element={<Duvidas />} />
         <Route path="/footer" element={<Footer />} />
+        <Route path="/docs" element={<Docs />} />
+
         <Route path="/componente/:id" element={<ComponenteDetalhe />} />
       </Routes>
     </BrowserRouter>

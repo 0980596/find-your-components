@@ -6,7 +6,7 @@ export default function Footer() {
             <footer>
                 <div className={style.footer}>
                     <p><a target="_blank" href="https://portf-lio-nu-swart.vercel.app/">Construído por Pedro Amancio</a></p>
-                    <p>@ 2026 Pedro Amancio</p>
+                    <p>@ 2026 Find Yours Components</p>
                 </div>
             </footer>
         </>
