@@ -17,7 +17,7 @@ export default function Header() {
             </nav>
 
             <div className={styles.right}>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
+                <a href="https://github.com/0980596/find-your-components" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
                     <FaGithub size={18} />
                 </a>
                 <span className={styles.separator}></span>

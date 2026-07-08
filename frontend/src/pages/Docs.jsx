@@ -69,8 +69,8 @@ export default function Docs() {
                     <h2 className={styles.ctaTitle}>Open Source</h2>
                     <p className={styles.ctaText}>Este projeto é aberto e aceita contribuições. Sinta-se à vontade para abrir issues e pull requests.</p>
                     <div className={styles.ctaButtons}>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={styles.ctaBtn}>Contribuir no GitHub</a>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className={styles.ctaBtnOutline}>Ver código fonte</a>
+                        <a href="https://github.com/0980596/find-your-components" target="_blank" rel="noopener noreferrer" className={styles.ctaBtn}>Contribuir no GitHub</a>
+                        <a href="https://github.com/0980596/find-your-components" target="_blank" rel="noopener noreferrer" className={styles.ctaBtnOutline}>Ver código fonte</a>
                     </div>
                 </div>
             </div>
