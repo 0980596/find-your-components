@@ -1,0 +1,123 @@
+.faqSection {
+    width: 100%;
+    padding: 6rem 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.leftColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.rightColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordionList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.accordionItem {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 1.5rem 0;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    color: inherit;
+}
+
+.question {
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+
+.chevronIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.answerContainer {
+    padding-bottom: 1.5rem;
+}
+
+.answerText {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.footerText {
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.link {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .container {
+        gap: 3rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .faqSection {
+        padding: 2rem 0;
+    }
+
+    .container {
+        margin-top: 24rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .title {
+        font-size: 2.25rem;
+    }
+
+    .accordionHeader {
+        padding: 1.25rem 0;
+    }
+}

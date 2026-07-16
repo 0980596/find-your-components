@@ -1,11 +1,15 @@
 import Duvidas01 from "../components/previews/Duvidas/Duvidas01"
 import Duvidas02 from "../components/previews/Duvidas/Duvidas02"
+import Duvidas03 from "../components/previews/Duvidas/Duvidas03"
 
 import Duvidas01Jsx from "../components/previews/Duvidas/Duvidas01.jsx?raw"
 import Duvidas01Css from "../components/previews/Duvidas/duvidas01.style.module.css?raw"
 
 import Duvidas02Jsx from "../components/previews/Duvidas/Duvidas02.jsx?raw"
 import Duvidas02Css from "../components/previews/Duvidas/duvidas02.style.module.css?raw"
+
+import Duvidas03Jsx from "../components/previews/Duvidas/Duvidas03.jsx?raw"
+import Duvidas03Css from "../components/previews/Duvidas/duvidas03.style.module.css?raw"
 
 export const categoria = {
     id: "duvidas",
@@ -26,6 +30,12 @@ export const componentes = [
         categoria: "duvidas",
         Component: Duvidas02,
         codigos: { jsx: Duvidas02Jsx, cssModule: Duvidas02Css },
+    },
+    {
+        id: "duvidas-03",
+        nome: "Dúvidas 03",
+        categoria: "duvidas",
+        Component: Duvidas03,
+        codigos: { jsx: Duvidas03Jsx, cssModule: Duvidas03Css },
     }
 ]
-
