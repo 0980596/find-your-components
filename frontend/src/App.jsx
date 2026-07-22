@@ -9,7 +9,6 @@ import Contato from './pages/categories/Contato.jsx'
 import Footer from './pages/categories/Footer.jsx'
 import Duvidas from './pages/categories/Duvidas.jsx'
 import Feedback from './pages/categories/Feedback.jsx'
-import ComponenteDetalhe from './pages/ComponenteDetalhe.jsx'
 import Docs from './pages/Docs.jsx'
 
 function ScrollToTop() {
@@ -36,8 +35,6 @@ export default function App() {
         <Route path="/duvidas" element={<Duvidas />} />
         <Route path="/footer" element={<Footer />} />
         <Route path="/docs" element={<Docs />} />
-
-        <Route path="/componente/:id" element={<ComponenteDetalhe />} />
       </Routes>
     </BrowserRouter>
   )

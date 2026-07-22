@@ -65,7 +65,6 @@ export default function Duvidas03() {
                         })}
                     </div>
                     <p className={styles.footerText}>
-                        {/* Can't find your answer, <a href="#" className={styles.link}>read our docs</a> or <a href="#" className={styles.link}>contact us</a>. */}
                        Não encontrou a sua resposta <a href="#" className={styles.link}>entre em contato conosco</a>.
                     </p>
                 </div>

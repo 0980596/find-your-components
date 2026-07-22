@@ -1,10 +1,7 @@
-import { Link } from "react-router-dom"
 import { categoria, componentes } from "../../data/contato"
-import PreviewWindow from "../../components/PreviewWindow"
+import ComponentActions from "../../components/ComponentActions"
 import Menu from "../../components/Menu"
 import style from "../../styles/categoria.module.css"
-
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Header from "../../components/Header"
 
 export default function Contato() {
@@ -20,13 +17,7 @@ export default function Contato() {
                         .map(item => (
                             <div className={style.item} key={item.id}>
                                 <h2>{item.nome}</h2>
-                                <PreviewWindow small>
-                                    <item.Component />
-                                </PreviewWindow>
-                                <div className={style.vercomponente}>
-                                    <Link to={`/componente/${item.id}`}>Clique aqui para ver o componente</Link>
-                                    <ChevronRight />
-                                </div>
+                                <ComponentActions item={item} previewSmall />
 
                             </div>
                         ))}
